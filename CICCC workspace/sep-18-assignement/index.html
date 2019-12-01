@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h1>Enter your birthday</h1>
+
+    <input type="number" id=userYear placeholder="YYYY">
+    <input type="number" id=userMonth placeholder="MM">
+    <input type="number" id=userDays placeholder="DD">
+    <input type="button" value="push" onclick="getWhatYouLive()"></button>
+    <h1 id="output"></h1>
+
+    <script>
+        function getWhatYouLive(){
+
+  
+    // get each number from input
+        var Byear = parseInt(document.getElementById("userYear").value);
+        var Bmonth = parseInt(document.getElementById("userMonth").value);
+        var Bdays = parseInt(document.getElementById("userDays").value);
+        var corrent = new Date();
+        var Cyear =  parseInt(corrent.getFullYear());
+        var Cmonth =  parseInt(corrent.getMonth()+1);
+        var Cdays =  parseInt(corrent.getDate());
+        var months = ["jan","feb","mar","apr","may","jun","jul","aug","sep","oct","nov","dec"];
+            months[0] = 31 //1st month
+            months[1] = 28 //2nd month
+            months[2] = 31 //3rd month
+            months[3] = 30 //4th month
+            months[4] = 31 //5th month
+            months[5] = 30 //6th month
+            months[6] = 31 //7th month
+            months[7] = 31 //8th month
+            months[8] = 30 //9th month
+            months[9] = 31 //10th month
+            months[10] = 30 //11th month
+            months[11] = 31 //12th month
+            var EndOfYearSum = 0;
+            var startOfYearSum = 0;
+    
+            
+            
+        // console.log(Byear,Bmonth,Bdays,Cyear,Cmonth,Cdays)
+
+        
+            // How many days remaining from birthday to end of birthday
+             var toEndOfMonth = (months[Bmonth-1]) - Bdays;//rest of days of this birthdaymonth
+            for(var i = Bmonth ; i<=11 ;i++){
+                EndOfYearSum += months[i]; //rest of days of this year 
+             }
+            EndOfYearSum = toEndOfMonth + EndOfYearSum;
+             
+             // How many days there are from birthday year to corrent year
+            var gapYear = Cyear - Byear; //gapYear = corrent year - birthday year
+             var leapYear = Math.floor(gapYear/4); //leapyear = gapyear / 4  (is cut off the number under the point)
+             var gapYearSum = (366 * leapYear) + (365 * (gapYear - leapYear));//gapYeraSum is the days of sum of gapyear
+             
+            
+
+             // How many days passed there are at current year
+             for(var i = Cmonth -2 ; i>=0 ;i--){
+                startOfYearSum += months[i]; //passed of days of this year  
+             }
+             
+             startOfYearSum = Cdays + startOfYearSum;
+             
+             
+             
+             // Here is conditions, whether it is devided 4 and 100 and 400 without remaining or not .
+             if(Byear % 4 == 0 && (!(Byear % 100 === 0 && Byear % 400 !== 0)))
+             {
+                leapyearResult = EndOfYearSum + gapYearSum + startOfYearSum + (1 - 366);
+                document.getElementById("output").innerHTML = "You live " + leapyearResult + " days."
+                
+            }else{
+                leapyearResult = EndOfYearSum + gapYearSum + startOfYearSum - 365 ;
+                document.getElementById("output").innerHTML = "You live " + leapyearResult + " days."
+            }
+            
+            
+        }
+
+
+
+
+             
+            
+
+
+            
+  
+
+
+
+    </script>
+</body>
+</html>

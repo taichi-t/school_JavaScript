@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <script>
+
+        function quickSort(array) {
+    (function sort(start, end) {
+        //再帰出口;
+        if(start >= end) {
+            return;
+        }
+        var left = start;
+        var right = end;
+        var reference = array[Math.round((left + right) / 2)];
+        //左から値を見ていく;
+        //最終的にleftとrightは同じindexになるか交差する;
+        //交差した場合はleft > rightになる;
+        while(left < right) {
+            if(array[left] >= reference) {
+                while(right > left) {
+                    if(array[right] <= reference) {
+                        var tmp = array[left];
+                        array[left] = array[right];
+                        array[right] = tmp;
+                        right--;
+                        break;
+                    }
+                    right--;
+                }
+            }
+            left++;
+        }
+        if(array[right] > reference) {
+            sort(start, right - 1);
+            sort(right, end);
+        }else if(array[right] < reference) {
+            sort(start, right);
+            sort(right + 1, end);
+        }else {
+            //array[right]がreferenceと同じ値の時の処理;
+            sort(start, right - 1);
+            sort(right + 1, end);
+        }
+    })(0, array.length - 1);
+ 
+    return array;
+}
+
+const numbers = [8, 5, 6, 9, 3, 1, 4, 2, 7, 10];
+        quickSort(numbers);
+        document.write(quickSort(numbers));
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

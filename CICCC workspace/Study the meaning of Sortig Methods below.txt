@@ -1,0 +1,70 @@
+Selection
+Selection is one of the algorithms to arrange the number.
+
+1.that find the minimum element.
+
+2.the number is swapped the number on the left end. If the minimum number is already on the left end, nothing happens.
+
+3.the number is sorted
+
+4.this process is continued until all of the number is sorted.
+
+
+Merge
+Marge is one of the algorithms to arrange the number.
+
+1. the numbers are separated into 2 sections, and then into 4 sections, keep doing this process until they are recognized as each number.
+
+2. the number is being merged like the minimum number is placed on the left end.
+
+3. When each group is merged, the minimum number in each group is compared and then the minimum number is arranged on the left end, and then keep doing the same process until all of the numbers are in one group.
+
+
+Quick
+Quick is one of the algorithms to arrange the number. Compared to other algorithms, less process and less number of times that numbers are swapped, so that in most case it is possible to sort the number efficiently than any sort algorithms.
+
+1. That selects one number randomly. This number is called "pivot". *pivot selector is fixed.
+
+2. The number on the left end is selected and on the right end as well. those selector is not fixed.
+
+3. The selector on the left end is looking for the number which is greater than the number in the pivot, and on the right is looking for the number which is smaller than that, in order.
+
+4. When those selectors stop, the number that is selected by selectors are swapped. this process keeps doing until those selectors bump into the same place.
+
+5. when that happened,  the number where those selectors are located and pivot number are swapped and make the number sorted.
+the process up till here is to separate into two groups, which right side is greater than the pivot number and the other is smaller than that.
+
+6. The process of 1 to 6 keeps doing in each section until all of the number is sorted. 
+
+
+
+Insertion
+Insertion is one of the algorithms to arrange the number.
+
+1. the number on the left end is sorted.
+
+2. the number on the left end except the sorted number is compared the number which is already sorted. If the sorted number is greater than that, those numbers are swapped.
+
+3. This process keeps doing until that number on the left end encounters the number that smaller than that.
+
+
+
+
+Bubble
+Bubble is one of the algorithms to arrange the number.
+
+1. A scale is placed in the right end and compares the 2 numbers. If the right number is smaller than the left number, they are swapped.
+
+2.the scale is moved to the next number, compare the two numbers as well, keep doing this process until the scale was moved to the end of left. In a sequence of actions, the most smaller number in all of the number is placed on the left end, and then the number is sorted and the scale is gone back to original place.
+
+3. This process keeps doing until all the number are sorted.
+
+
+
+
+Binary Search
+
+Binary is one of the algorithms to search the numbers that are already sorted.
+
+1. If all the number are sorted in ascending order, the number in a central position is based. It is not a purpose to find that number. If a target number is larger than central number, it searches the second half part. If a target number is smaller than that, it searches the first half part.
+

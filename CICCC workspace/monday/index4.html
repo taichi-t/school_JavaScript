@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    dt{
+        width: 100px;
+        height: auto;
+        list-style: none;
+        border: solid 1px red;
+        text-align: center;
+    }
+
+
+
+
+
+
+    
+    </style>
+</head>
+<body>
+    <h1 id="output"></h1>
+
+    <dl>
+        <dt>Name</dt>
+        <dd id="name"></dd>
+       
+        <dt>Math</dt>
+        <dd id="math"></dd>
+       
+        <dt>Science</dt>
+        <dd id="science"></dd>
+       
+        <dt>English</dt>
+        <dd id="english"></dd>
+       
+        <dt>average</dt>
+        <dd id="average"></dd>
+        
+    </dl>
+    <script>
+      var name = prompt("what is your name?")
+      var english = Number(prompt("what is your English score?"))
+      var math = Number(prompt("what is your Math score?"))
+      var science = Number(prompt("what is your Science score?"))
+      var average = (math + science +　english) / 3
+
+
+    
+    if(average > 90)
+    document.getElementById("output").innerHTML = name +", your average score is " + average + " Excelent";
+
+    if(average > 80)
+    document.getElementById("output").innerHTML = name +", your average score is " + average + " Greate job";
+
+    if(average > 70)
+    document.getElementById("output").innerHTML = name +", your average score is " + average + " Not bad";
+
+    else
+    document.getElementById("output").innerHTML = name +", your average score is " + average + " You faild";
+
+    document.getElementById("name").innerHTML = name;
+    document.getElementById("math").innerHTML = math;
+    document.getElementById("science").innerHTML = science;
+    document.getElementById("english").innerHTML = english;
+    document.getElementById("average").innerHTML = average;
+
+
+      </script>
+
+
+</body>
+</html>

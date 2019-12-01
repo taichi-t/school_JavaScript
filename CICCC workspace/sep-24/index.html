@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="output">1 9 4 5 16 7 33</h1>
+    <button type="button" value="Selection Sort" onclick="selectionSort()">Selection Sort</button>
+
+    <script>
+ function selectionSort(){
+     var array = [1,9,4,5,16,7,33]
+    var temp;
+
+
+    for(var i=0; i<array.length; i++){
+        var mi = i;
+        
+        for(var j = i + 1; j<array.length; j++) {
+            if(array[j] < array[mi])
+                mi = j;
+        }
+
+        temp = array[i];
+        array[i] = array[mi];
+        array[mi] = temp;
+    }
+    document.getElementById("output").innerHTML = array[0] + " " + array[1] + " " + array[2] + " " + array[3] + " " + array[4] + " " + array[5] + " " + array[6] 
+}
+
+    </script>
+    
+
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+   
+    .form{
+        margin: 0 auto;
+        width: 500px;
+        list-style: none;
+        text-align: center;
+    }
+
+    
+
+
+
+
+
+
+
+    
+    </style>
+</head>
+<body>
+    <div class="form">
+  <form name="qform" id="qform">
+      <dl>
+          <dt>name</dt>
+          <dd><input type="text" name="name" id="name"></dd>
+          <dt>math</dt>
+          <dd><input type="number" name="math" id="math"></dd>
+          <dt>science</dt>
+          <dd><input type="number" name="science" id="science"></dd>
+          <dt>english</dt>
+          <dd><input type="number" name="english" id="english"></dd>
+
+          <input type="button" value="culculate" onclick="check();">
+      </dl>
+
+      <div id="result"></div>
+  </form>
+    </div>
+
+ 
+
+
+
+
+    <script>
+
+        function check(){
+            var name = document.qform.name.value;
+            var math = document.qform.math.value;
+            var science = document.qform.science.value;
+            var english = document.qform.english.value;
+
+            var average = (parseInt(math) + parseInt(science) + parseInt(english))/3;
+
+            var result;
+
+     if(average > 90){
+         result ="average/" + Math.round(average) + " " + name + " , you are exellent!";
+     }
+    else if(average > 80){
+        result = "average/" + Math.round(average) + " " + name + " , you are great job!";
+    }
+    else if(average > 70){
+        result ="average/" + Math.round(average) + " " +name + " , you are not bad!";
+    }
+    else{
+        result ="average/" + Math.round(average) + " " + name + " , you are faild!";
+    }
+
+    var html = "<dl>";
+        html += "<dt>" + "result" + "</dt>";
+        html += "<dd>" + result + "</dd>";
+        html += "</dl>" ;
+
+    document.getElementById("result").innerHTML = html ;
+}  
+
+
+ 
+
+      </script>
+
+
+</body>
+</html>

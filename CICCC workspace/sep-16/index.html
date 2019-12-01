@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="output"></h1>
+
+    <dl>
+        <dt>Name</dt>
+        <dd id="name"></dd>
+       
+        <dt>Java</dt>
+        <dd id="java"></dd>
+       
+        <dt>intro</dt>
+        <dd id="intro"></dd>
+       
+        <dt>algorithum</dt>
+        <dd id="algorithum"></dd>
+       
+        <dt>average</dt>
+        <dd id="average"></dd>
+
+        <script>
+
+            /*=======================
+            input
+            ========================*/
+            var name = prompt("what is your name?")
+            var java = Number(prompt("what is your java score?"))
+            var intro = Number(prompt("what is your intro score?"))
+            var algorithum = Number(prompt("what is your algorithum score?"))
+           
+            /*=======================
+            process
+            ========================*/
+            
+          var average = (java + intro +　algorithum) / 3
+
+            /*=======================
+            condition / output
+            ========================*/
+          if(average <= 70)
+          document.getElementById("output").innerHTML = name +", your average score is " + average.toFixed(2) + " faile";
+      
+      
+          else
+          document.getElementById("output").innerHTML = name +", your average score is " + average.toFixed(2) + " You passed";
+      
+          document.getElementById("name").innerHTML = name;
+          document.getElementById("java").innerHTML = java;
+          document.getElementById("intro").innerHTML = intro;
+          document.getElementById("algorithum").innerHTML = algorithum;
+          document.getElementById("average").innerHTML = average.toFixed(2);
+      
+      
+            </script>
+</body>
+</html>
