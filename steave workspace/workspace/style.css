@@ -1,0 +1,34 @@
+#group{
+    background-color: skyblue;
+    width: 90%;
+    border: 4px solid rgb(110, 28,28);
+    margin: 20px auto;
+    padding: 30px;
+    font-size: 2em;
+}
+
+img{
+    float: right;
+    margin: 40px;
+    border: 10px solid white;
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    position: relative;
+    top: 100px;
+    left: 100px;
+    transition: ease-out 2s;
+}
+
+img:hover{
+    transform: rotate(30deg) translate(-300px)
+}
+
+p::first-letter{
+    color: red;
+    font-size: 4em
+}
+
+p{
+    width: 1300px;
+}

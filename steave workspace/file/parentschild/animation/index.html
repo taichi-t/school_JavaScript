@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    div{
+        width: 400px;
+        height: 150px;
+        background-color: blue;
+        animation-name:vlad 4s infinite;
+        transition: 4s ease-in-out;
+    }
+
+    div:hover{
+        position: relative;
+        transform:translateX(300px) translateY(300px) scale(2,3);
+    }
+
+    @keyframes vlad{
+        0%{background-color: red;}
+        25%{background-color: skyblue;}
+        50%{background-color: gold;}
+        75%{background-color: purple;}
+        110%{background-color: black;}
+    }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

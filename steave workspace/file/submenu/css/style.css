@@ -1,0 +1,48 @@
+body{
+    background: url(../images/wooden-boat-4395855_1280.jpg) center center fixed no-repeat;
+    background-size: cover;
+}
+
+
+ul li{
+    width: 300px;
+    background-color: rgb(93, 153, 93);
+    float: left;
+    color: white;
+    height: 30px;
+    line-height: 30px;
+    border: 2px solid transparent;
+}
+
+ul li ul{
+    display: none;
+}
+
+li{
+    list-style: none;
+    text-align: center;
+    border: 2px solid transparent;
+    font-size: 1.5em;
+    padding: 5px;
+}
+ul li:hover ul{
+    display: block;
+   
+}
+
+ul li:hover{
+    background-color: rgb(201, 201, 130);
+}
+
+ul li:hover ul li{
+    opacity: 0.6;
+    background-color: rgb(173, 125, 125);
+    position: relative;
+    left: -48px;
+    top: 5px;
+}
+
+ul li ul li:hover{
+    font-size: 1em;
+    background-color: skyblue;
+}

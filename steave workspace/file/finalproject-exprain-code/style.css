@@ -1,0 +1,27 @@
+
+
+.box-item1{
+    float: left;
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+}
+
+.box-item2{
+    float: left;
+    width: 100px;
+    height: 100px;
+    background-color: green;
+}
+.box-item3{
+    float: left;
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+.box-item4{
+    clear: left;
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+}

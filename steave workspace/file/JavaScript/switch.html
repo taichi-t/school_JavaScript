@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    #output{
+        font-size: 5em;
+        font-weight: 800;
+        text-align: center
+    }
+    </style>
+</head>
+<body>
+   <h1 id="output"></h1> 
+   <script>
+       let monthNumber =Number(prompt("Tell me a month number."));
+       switch(monthNumber){
+           case 1:
+           document.getElementById("output").innerHTML="january";
+           break;
+           case 2:
+           document.getElementById("output").innerHTML="February";
+           break;
+           case 3:
+           document.getElementById("output").innerHTML="March";
+           break;
+           case 4:
+           document.getElementById("output").innerHTML="April";
+           break;
+           case 5:
+           document.getElementById("output").innerHTML="May";
+           break;
+           case 6:
+           document.getElementById("output").innerHTML="June";
+           break;
+           case 7:
+           document.getElementById("output").innerHTML="July";
+           break;
+           case 8:
+           document.getElementById("output").innerHTML="August";
+           break;
+           case 9:
+           document.getElementById("output").innerHTML="September";
+           break;
+           case 10:
+           document.getElementById("output").innerHTML="October";
+           break;
+           case 11:
+           document.getElementById("output").innerHTML="November";
+           break;
+           default:
+           document.getElementById("output").innerHTML="December";
+    
+       }
+
+   </script>
+</body>
+</html>
